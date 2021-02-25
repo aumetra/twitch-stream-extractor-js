@@ -1,0 +1,15 @@
+[package]
+name = "twitch-stream-extractor-js"
+version = "0.1.0"
+authors = ["Glitch <smallglitch@cryptolab.net>"]
+edition = "2018"
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+js-sys = "0.3"
+twitch-stream-extractor = { git = "https://github.com/smallglitch/twitch-stream-extractor.git", branch = "main", features = ["reqwest", "not-send"] }
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.4"
